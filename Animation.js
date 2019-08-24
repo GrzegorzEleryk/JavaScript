@@ -1,3 +1,5 @@
+'use strict';
+
 class Animation {
 
 	constructor(from, to, duration, animationPath, targets, callback){

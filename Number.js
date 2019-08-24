@@ -1,3 +1,5 @@
+'use strict';
+
  /**
  * Returns a number with a specified quantity of digits after the decimal point
  * @param precision Integer not NaN number of significant digits after the decimal point
