@@ -14,14 +14,18 @@ Number.prototype.round = function(precision){
 	  ){
 		return this;
 	  }
-  
+	  
+	  if((this+'').includes('e-')) {
+		return Math.round(this);
+	  }
+
 	  // Example
 	  // this = 1234.56789
 	  // precision = 3
 	  // [this]e+[precision] => 1234567.89
 	  // Math.round(1234567.89) => 1234568
 	  // 1234568e-[precision] => 1234.568
-  
+
 	  return +(Math.round(+(+this+'e+'+precision))+'e-'+precision);
 	
 }
